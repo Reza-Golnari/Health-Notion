@@ -708,6 +708,50 @@ video {
   display: none;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.top-\[50\%\] {
+  top: 50%;
+}
+
+.top-\[49\%\] {
+  top: 49%;
+}
+
+.top-\[49\.9\%\] {
+  top: 49.9%;
+}
+
+.-z-10 {
+  z-index: -10;
+}
+
 .mx-18 {
   margin-left: 72px;
   margin-right: 72px;
@@ -715,6 +759,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .h-6 {
@@ -725,20 +773,16 @@ video {
   height: 810px;
 }
 
-.w-6 {
-  width: 1.5rem;
+.h-full {
+  height: 100%;
 }
 
-.w-\[180px\] {
-  width: 180px;
+.h-screen {
+  height: 100vh;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
-.w-1\/2 {
-  width: 50%;
+.h-\[400vh\] {
+  height: 400vh;
 }
 
 .w-1\/3 {
@@ -749,8 +793,34 @@ video {
   width: 66.666667%;
 }
 
-.grow {
-  flex-grow: 1;
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-center {
@@ -767,6 +837,14 @@ video {
 
 .gap-9 {
   gap: 2.25rem;
+}
+
+.gap-18 {
+  gap: 72px;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .space-y-18 > :not([hidden]) ~ :not([hidden]) {
@@ -805,9 +883,9 @@ video {
   background-color: rgb(27 77 62 / var(--tw-bg-opacity));
 }
 
-.bg-yellow-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 249 195 / var(--tw-bg-opacity));
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .px-18 {
@@ -815,36 +893,40 @@ video {
   padding-right: 72px;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .px-9 {
   padding-left: 2.25rem;
   padding-right: 2.25rem;
 }
 
-.pt-9 {
-  padding-top: 2.25rem;
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pl-9 {
   padding-left: 2.25rem;
 }
 
-.font-switzer-medium {
-  font-family: Switzer-Medium;
+.pt-9 {
+  padding-top: 2.25rem;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.font-switzer-medium {
+  font-family: Switzer-Medium;
 }
 
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {

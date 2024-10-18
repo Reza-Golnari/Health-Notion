@@ -1,5 +1,10 @@
 import { gsap } from "gsap";
 
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
+
 gsap.fromTo('#navbar' , {
     opacity: 0,
     yPercent: -100,
@@ -17,4 +22,17 @@ gsap.fromTo('#headerContent *' , {
     xPercent: 0,
     duration: 1,
     stagger: .2,
+})
+
+gsap.to('#headerImage' , {
+    scrollTrigger:{
+        trigger: "header",
+        pin: true,
+        scrub: true,
+        duration: 200,
+    },
+    borderRadius: '20px',
+    boxShadow: "0px 5px 15px rgba(0,0,0,.2)",
+    width: "95%",
+    height: "84%",
 })
