@@ -708,6 +708,20 @@ video {
   display: none;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
+.space-y-36 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(9rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(9rem * var(--tw-space-y-reverse));
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
 .font-switzer-medium {
   font-family: Switzer-Medium;
 }
