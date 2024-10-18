@@ -16,6 +16,12 @@ module.exports = {
         'switzer-extrabold': 'Switzer-Extrabold',
         'switzer-black': 'Switzer-Black'
       },
+      colors:{
+        primary: '#1B4D3E',
+        secondary: '#8E9779',
+        bg: '#F5F5F5',
+        dark: '#212322',
+      }
     },
   },
   plugins: [],
