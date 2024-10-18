@@ -708,8 +708,40 @@ video {
   display: none;
 }
 
+.flex {
+  display: flex;
+}
+
+.h-6 {
+  height: 1.5rem;
+}
+
 .w-screen {
   width: 100vw;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-y-36 > :not([hidden]) ~ :not([hidden]) {
@@ -720,4 +752,27 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.bg-bg {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+
+.px-\[72px\] {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
+.pt-9 {
+  padding-top: 2.25rem;
+}
+
+.font-switzer-medium {
+  font-family: Switzer-Medium;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
