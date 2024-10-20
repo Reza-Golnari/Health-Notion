@@ -21,6 +21,8 @@ module.exports = {
         secondary: '#8E9779',
         bg: '#F5F5F5',
         dark: '#212322',
+        text: '#757373',
+        title: '#212322',
       },
       spacing: {
         18: '72px',
