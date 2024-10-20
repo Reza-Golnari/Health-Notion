@@ -44,3 +44,34 @@ gsap.fromTo('.text-content *' , {
     stagger: .2,
     xPercent: 0,
 })
+
+gsap.fromTo('#aboutLeftCard', {
+    opacity: 0,
+    xPercent: -200,
+    y: 100,
+} , {
+    scrollTrigger:'#aboutLeftCard',
+    opacity: 1,
+    xPercent: 0,
+    y: 0,
+})
+
+gsap.fromTo('#aboutRightCard', {
+    opacity: 0,
+    xPercent: 200,
+    y: 100,
+} , {
+    scrollTrigger:'#aboutRightCard',
+    opacity: 1,
+    xPercent: 0,
+    y: 0,
+})
+
+gsap.fromTo('#scrollBrands', {
+    opacity: 0,
+    yPercent: 100,
+} , {
+    scrollTrigger:'#scrollBrands',
+    opacity: 1,
+    yPercent: 0,
+})
