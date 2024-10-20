@@ -34,3 +34,13 @@ gsap.to('#headerImage' , {
     width: "95%",
     height: "84%",
 })
+
+gsap.fromTo('.text-content *' , {
+    opacity: 0,
+    xPercent: -200,
+} , {
+    scrollTrigger: '.text-content',
+    opacity: 1,
+    stagger: .2,
+    xPercent: 0,
+})
