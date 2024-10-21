@@ -37,9 +37,12 @@ gsap.to('#headerImage' , {
 
 gsap.fromTo('.text-content *' , {
     opacity: 0,
-    xPercent: -200,
+    xPercent: -100,
 } , {
-    scrollTrigger: '.text-content',
+    scrollTrigger: {
+        trigger: '.text-content',
+        toggleActions: 'play reverse play reverse',
+    },
     opacity: 1,
     stagger: .2,
     xPercent: 0,
@@ -47,10 +50,13 @@ gsap.fromTo('.text-content *' , {
 
 gsap.fromTo('#aboutLeftCard', {
     opacity: 0,
-    xPercent: -200,
+    xPercent: -100,
     y: 100,
 } , {
-    scrollTrigger:'#aboutLeftCard',
+    scrollTrigger: {
+        trigger: '#aboutLeftCard',
+        toggleActions: 'play reverse play reverse',
+    },
     opacity: 1,
     xPercent: 0,
     y: 0,
@@ -58,10 +64,13 @@ gsap.fromTo('#aboutLeftCard', {
 
 gsap.fromTo('#aboutRightCard', {
     opacity: 0,
-    xPercent: 200,
+    xPercent: 100,
     y: 100,
 } , {
-    scrollTrigger:'#aboutRightCard',
+    scrollTrigger: {
+        trigger: '#aboutRightCard',
+        toggleActions: 'play reverse play reverse',
+    },
     opacity: 1,
     xPercent: 0,
     y: 0,
@@ -71,7 +80,10 @@ gsap.fromTo('#scrollBrands', {
     opacity: 0,
     yPercent: 100,
 } , {
-    scrollTrigger:'#scrollBrands',
+    scrollTrigger: {
+        trigger: '#scrollBrands',
+        toggleActions: 'play reverse play reverse',
+    },
     opacity: 1,
     yPercent: 0,
 })
