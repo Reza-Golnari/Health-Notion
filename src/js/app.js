@@ -87,3 +87,49 @@ gsap.fromTo('#scrollBrands', {
     opacity: 1,
     yPercent: 0,
 })
+
+gsap.to('#business' , {
+    scrollTrigger: {
+        trigger: '#business',
+        pin: true,
+        start: '-=20',
+        end: '+=1500'
+    },
+})
+
+gsap.to('#b1' , {
+    scrollTrigger: {
+        trigger: '#b1',
+        start: 'top top',
+        end: '+=1455',
+        toggleActions: 'play reverse play reverse',
+    },
+    bottom: 'unset',
+    top: 0,
+    height: '100%',
+})
+
+gsap.to('#b2' , {
+    scrollTrigger: {
+        trigger: '#b2',
+        start: '+=300',
+        end: '+=1200',
+        toggleActions: 'play reverse play reverse',
+    },
+    bottom: 'unset',
+    top: 60,
+    height: '100%',
+})
+
+gsap.to('#b3' , {
+    scrollTrigger: {
+        trigger: '#b3',
+        start: '+=600',
+        end: '+=1090',
+        toggleActions: 'play reverse play reverse',
+    },
+    bottom: 'unset',
+    start: '+=5000',
+    top: 120,
+    height: '100%',
+})
