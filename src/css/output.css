@@ -728,20 +728,20 @@ video {
   bottom: -90px;
 }
 
-.left-1\/2 {
-  left: 50%;
-}
-
-.top-\[49\.9\%\] {
-  top: 49.9%;
-}
-
 .left-0 {
   left: 0px;
 }
 
+.left-1\/2 {
+  left: 50%;
+}
+
 .top-0 {
   top: 0px;
+}
+
+.top-\[49\.9\%\] {
+  top: 49.9%;
 }
 
 .-z-10 {

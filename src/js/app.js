@@ -149,7 +149,7 @@ gsap.to('#b3' , {
         trigger: '#b3',
         start: '+=600',
         end: '+=1110',
-        toggleActions: 'play reverse play reverse',
+        toggleActions: 'play none play reverse',
         onEnter: ()=> {
             gsap.fromTo('#bi3' , {opacity: 0} , {
                 zIndex: 30,
