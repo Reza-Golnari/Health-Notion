@@ -125,7 +125,7 @@ gsap.to('#b3' , {
     scrollTrigger: {
         trigger: '#b3',
         start: '+=600',
-        end: '+=1090',
+        end: '+=1110',
         toggleActions: 'play reverse play reverse',
     },
     bottom: 'unset',
