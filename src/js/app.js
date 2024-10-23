@@ -103,6 +103,17 @@ gsap.to('#b1' , {
         start: 'top top',
         end: '+=1455',
         toggleActions: 'play reverse play reverse',
+        onEnter: ()=> {
+            gsap.to('#bi1' , {
+                filter: 'blur(0px)',
+                zIndex: 10,
+            })
+        },
+        onLeaveBack: ()=> {
+            gsap.to('#bi1' , {
+                filter: 'blur(8px)',
+            })
+        }
     },
     bottom: 'unset',
     top: 0,
@@ -115,6 +126,18 @@ gsap.to('#b2' , {
         start: '+=300',
         end: '+=1200',
         toggleActions: 'play reverse play reverse',
+        onEnter: ()=> {
+            gsap.fromTo('#bi2' , {opacity: 0} , {
+                zIndex: 20,
+                opacity: 1,
+            })
+        },
+        onLeaveBack: ()=> {
+            gsap.to('#bi2' , {
+                zIndex: 0,
+                opacity: 0,
+            })
+        }
     },
     bottom: 'unset',
     top: 60,
@@ -127,6 +150,18 @@ gsap.to('#b3' , {
         start: '+=600',
         end: '+=1110',
         toggleActions: 'play reverse play reverse',
+        onEnter: ()=> {
+            gsap.fromTo('#bi3' , {opacity: 0} , {
+                zIndex: 30,
+                opacity: 1,
+            })
+        },
+        onLeaveBack: ()=> {
+            gsap.to('#bi3' , {
+                zIndex: 0,
+                opacity: 0,
+            })
+        }
     },
     bottom: 'unset',
     start: '+=5000',
