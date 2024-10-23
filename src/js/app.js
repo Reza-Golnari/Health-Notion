@@ -102,7 +102,7 @@ gsap.to('#b1' , {
         trigger: '#b1',
         start: 'top top',
         end: '+=1455',
-        toggleActions: 'play reverse play reverse',
+        toggleActions: 'play none play reverse',
         onEnter: ()=> {
             gsap.to('#bi1' , {
                 filter: 'blur(0px)',
@@ -125,7 +125,7 @@ gsap.to('#b2' , {
         trigger: '#b2',
         start: '+=300',
         end: '+=1200',
-        toggleActions: 'play reverse play reverse',
+        toggleActions: 'play none play reverse',
         onEnter: ()=> {
             gsap.fromTo('#bi2' , {opacity: 0} , {
                 zIndex: 20,
