@@ -858,6 +858,11 @@ video {
   margin-bottom: 0.75rem;
 }
 
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-4{
   margin-bottom: 1rem;
 }
@@ -937,6 +942,10 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-1\/2{
+  width: 50%;
 }
 
 .-translate-x-1\/2{
