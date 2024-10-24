@@ -17,3 +17,7 @@
         transform: translateX(-65%);
     }
 }
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}

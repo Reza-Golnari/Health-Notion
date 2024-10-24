@@ -200,7 +200,6 @@ cardsOdd.forEach((card) => {
         opacity: 1,
         yPercent: 0,
         duration: 1,
-        delay: 0.5,
     });
 });
 
@@ -219,7 +218,6 @@ cardsEven.forEach((card) => {
         opacity: 1,
         yPercent: 0,
         duration: 1,
-        delay: 0.5,
     });
 });
 
