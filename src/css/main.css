@@ -1,4 +1,5 @@
 @import '../fonts/switzer/css/switzer.css';
+@import '../fonts/roboto/roboto.css';
 
 @tailwind base;
 @tailwind components;

@@ -14,7 +14,13 @@ module.exports = {
         'switzer-semibold': 'Switzer-Semibold',
         'switzer-bold': 'Switzer-Bold',
         'switzer-extrabold': 'Switzer-Extrabold',
-        'switzer-black': 'Switzer-Black'
+        'switzer-black': 'Switzer-Black',
+
+        'roboto-thin' :'roboto-thin',
+        'roboto-light' :'roboto-light',
+        'roboto-regular' :'roboto-regular',
+        'roboto-medium' :'roboto-medium',
+        'roboto-bold' :'roboto-bold',
       },
       colors:{
         primary: '#1B4D3E',
