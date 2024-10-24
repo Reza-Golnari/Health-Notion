@@ -168,3 +168,19 @@ gsap.to('#b3' , {
     top: 120,
     height: '100%',
 })
+
+const categoriesTextItemsArr = gsap.utils.toArray(document.querySelectorAll('#categoriesHeader *'))
+
+categoriesTextItemsArr.forEach(item => {
+    gsap.fromTo(item , {
+        yPercent: 100,
+        opacity: 0,
+    } , {
+        scrollTrigger: {
+            trigger: item,
+            toggleActions: 'play none play reverse',
+        },
+        yPercent: 0,
+        opacity: 1,
+    })
+})
