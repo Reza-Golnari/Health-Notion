@@ -184,3 +184,42 @@ categoriesTextItemsArr.forEach(item => {
         opacity: 1,
     })
 })
+
+const cardsOdd = document.querySelectorAll('#productContainer > .product-odd');
+
+cardsOdd.forEach((card) => {
+    gsap.fromTo(card,{
+        opacity: 0,
+        yPercent: 120
+    }, {
+        scrollTrigger: {
+            trigger: card,
+            start: "top 120%",
+            toggleActions: "play none play reverse",
+        },
+        opacity: 1,
+        yPercent: 0,
+        duration: 1,
+        delay: 0.5,
+    });
+});
+
+const cardsEven = document.querySelectorAll('#productContainer > .product-even');
+
+cardsEven.forEach((card) => {
+    gsap.fromTo(card,{
+        opacity: 0,
+        yPercent: 50
+    }, {
+        scrollTrigger: {
+            trigger: card,
+            start: "top 100%",
+            toggleActions: "play none play reverse",
+        },
+        opacity: 1,
+        yPercent: 0,
+        duration: 1,
+        delay: 0.5,
+    });
+});
+
