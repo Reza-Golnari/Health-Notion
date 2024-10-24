@@ -221,3 +221,19 @@ cardsEven.forEach((card) => {
     });
 });
 
+const mostHaveProductsItems = document.querySelectorAll('#mostHaveProductsScroll > *')
+
+mostHaveProductsItems.forEach((item) => {
+    gsap.fromTo(item, {
+        opacity: 0,
+        yPercent: 100,
+    } , {
+        scrollTrigger: {
+            trigger: item,
+            toggleActions: 'play none play reverse',
+        },
+        yPercent: 0,
+        opacity: 1,
+        duration: 1,
+    })
+})
