@@ -254,3 +254,16 @@ toTopItems.forEach((item) => {
         duration: 1,
     })
 })
+
+gsap.fromTo('#cardContainer' , {
+    opacity: 0,
+    yPercent: 50,
+} , {
+    scrollTrigger: {
+        trigger: '#cardContainer',
+        toggleActions: 'play none play reverse',
+    },
+    yPercent: 0,
+    opacity: 1,
+    duration: 1,
+})
