@@ -237,3 +237,20 @@ mostHaveProductsItems.forEach((item) => {
         duration: 1,
     })
 })
+
+const toTopItems = document.querySelectorAll('.to-top > *');
+
+toTopItems.forEach((item) => {
+    gsap.fromTo(item, {
+        opacity: 0,
+        yPercent: 100,
+    } ,  {
+        scrollTrigger: {
+            trigger: item,
+            toggleActions: 'play none play reverse',
+        },
+        yPercent: 0,
+        opacity: 1,
+        duration: 1,
+    })
+})

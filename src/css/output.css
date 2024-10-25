@@ -857,6 +857,14 @@ video {
   margin-top: 2.25rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
 .flex{
   display: flex;
 }
