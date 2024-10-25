@@ -267,3 +267,31 @@ gsap.fromTo('#cardContainer' , {
     opacity: 1,
     duration: 1,
 })
+
+gsap.fromTo('#cardScanner' , {
+    rotation: 0,
+    xPercent: 0,
+} , {
+    scrollTrigger: {
+        trigger: '#cardContainer',
+        toggleActions: 'play none play reverse',
+    },
+    delay: .8,
+    duration: 1,
+    rotation: 7,
+    xPercent: 93,
+})
+
+gsap.fromTo('#cardPanel' , {
+    rotation: 0,
+    xPercent: 0,
+} , {
+    scrollTrigger: {
+        trigger: '#cardContainer',
+        toggleActions: 'play none play reverse',
+    },
+    delay: .8,
+    duration: 1,
+    rotation: -7,
+    xPercent: -93,
+})

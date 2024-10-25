@@ -776,6 +776,14 @@ video {
   top: 49.9%;
 }
 
+.top-24{
+  top: 6rem;
+}
+
+.top-10{
+  top: 2.5rem;
+}
+
 .-z-10{
   z-index: -10;
 }
@@ -903,6 +911,10 @@ video {
 
 .h-\[400px\]{
   height: 400px;
+}
+
+.h-\[450px\]{
+  height: 450px;
 }
 
 .w-1\/2{
