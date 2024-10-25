@@ -1015,16 +1015,18 @@ video {
   margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .overflow-auto{
   overflow: auto;
 }
 
 .overflow-hidden{
   overflow: hidden;
-}
-
-.overflow-scroll{
-  overflow: scroll;
 }
 
 .overflow-x-hidden{
@@ -1086,6 +1088,11 @@ video {
   padding: 72px;
 }
 
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .px-18{
   padding-left: 72px;
   padding-right: 72px;
@@ -1111,35 +1118,12 @@ video {
   padding-bottom: 2.25rem;
 }
 
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-24{
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-
-.px-72{
-  padding-left: 18rem;
-  padding-right: 18rem;
-}
-
 .pl-9{
   padding-left: 2.25rem;
 }
 
 .pt-9{
   padding-top: 2.25rem;
-}
-
-.pl-10{
-  padding-left: 2.5rem;
-}
-
-.pr-10{
-  padding-right: 2.5rem;
 }
 
 .text-center{
@@ -1271,11 +1255,6 @@ video {
   width: 16.666667%;
 }
 
-.before\:bg-gradient-to-r::before{
-  content: var(--tw-content);
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
 .before\:bg-gradient-to-l::before{
   content: var(--tw-content);
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
@@ -1291,11 +1270,6 @@ video {
 .before\:to-transparent::before{
   content: var(--tw-content);
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
-}
-
-.after\:fixed::after{
-  content: var(--tw-content);
-  position: fixed;
 }
 
 .after\:absolute::after{
@@ -1318,42 +1292,14 @@ video {
   height: 100%;
 }
 
-.after\:w-24::after{
-  content: var(--tw-content);
-  width: 6rem;
-}
-
-.after\:w-1\/5::after{
-  content: var(--tw-content);
-  width: 20%;
-}
-
 .after\:w-2\/12::after{
   content: var(--tw-content);
   width: 16.666667%;
 }
 
-.after\:w-1\/12::after{
-  content: var(--tw-content);
-  width: 8.333333%;
-}
-
-.after\:bg-dark::after{
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(33 35 34 / var(--tw-bg-opacity));
-}
-
 .after\:bg-gradient-to-r::after{
   content: var(--tw-content);
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
-}
-
-.after\:from-white::after{
-  content: var(--tw-content);
-  --tw-gradient-from: #fff var(--tw-gradient-from-position);
-  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
 .after\:from-bg::after{
