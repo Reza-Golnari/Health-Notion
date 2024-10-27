@@ -28,7 +28,11 @@ module.exports = {
         secondaryBg: '#8E9779',
         primaryBg: '#303331',
         bg: '#F5F5F5',
-        dark: '#212322',
+        dark: {
+          DEFAULT: '#212322',
+          100: '#303030',
+          200: '#191B1A'
+        },
         text: '#757373',
         title: '#212322',
       },

@@ -21,3 +21,12 @@
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
+.swiper-slide{
+    @apply opacity-50;
+    transition: opacity 150ms !important;
+}
+
+.swiper-slide-next{
+    @apply opacity-100
+}

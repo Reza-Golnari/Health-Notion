@@ -1,5 +1,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/css';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -295,3 +299,12 @@ gsap.fromTo('#cardPanel' , {
     rotation: -7,
     xPercent: -93,
 })
+
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 72,
+    autoplay: {
+      delay: 2000,
+    },
+});
