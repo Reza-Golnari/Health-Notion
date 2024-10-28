@@ -304,3 +304,16 @@ const swiper = new Swiper(".mySwiper", {
         delay: 5000,
     },
 });
+
+gsap.fromTo('.comments-center' , {
+    opacity: 0,
+    yPercent: 50,
+} , {
+    scrollTrigger: {
+        trigger: '.comments-center',
+        toggleActions: 'play none play reverse',
+    },
+    yPercent: 0,
+    opacity: 1,
+    duration: 1,
+})
