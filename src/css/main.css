@@ -24,9 +24,11 @@
 
 .swiper-slide{
     @apply opacity-50;
-    transition: opacity 150ms !important;
+    transform: scale(.8) !important;
+    transition: opacity 150ms , transform 150ms !important;
 }
 
-.swiper-slide-next{
-    @apply opacity-100
+.swiper-slide-active{
+    @apply opacity-100;
+    transform: scale(1) !important ;
 }

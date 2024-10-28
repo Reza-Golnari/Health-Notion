@@ -1,10 +1,5 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
-import 'swiper/css';
-
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.fromTo('#navbar' , {
@@ -304,7 +299,8 @@ const swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     loop: true,
     spaceBetween: 72,
+    centeredSlides: true,
     autoplay: {
-      delay: 2000,
+        delay: 5000,
     },
 });
