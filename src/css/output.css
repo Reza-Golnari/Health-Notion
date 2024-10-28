@@ -808,6 +808,14 @@ video {
   grid-column: span 4 / span 4;
 }
 
+.row-span-2{
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3{
+  grid-row: span 3 / span 3;
+}
+
 .mx-18{
   margin-left: 72px;
   margin-right: 72px;
@@ -873,6 +881,10 @@ video {
   margin-top: 9rem;
 }
 
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -919,6 +931,10 @@ video {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[820px\]{
+  height: 820px;
 }
 
 .w-1\/2{
@@ -1018,6 +1034,18 @@ video {
 
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-5{
+  grid-template-rows: repeat(5, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -1170,8 +1198,25 @@ video {
   background-color: rgb(255 255 255 / 0.15);
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\/public\/images\/banner\.jpg\'\)\]{
   background-image: url('/public/images/banner.jpg');
+}
+
+.bg-\[url\(\'\'\)\]{
+  background-image: url('');
+}
+
+.bg-\[url\(\'https\:\/\/picsum\.photos\/800\'\)\]{
+  background-image: url('https://picsum.photos/800');
+}
+
+.bg-\[url\(\'https\:\/\/picsum\.photos\/900\'\)\]{
+  background-image: url('https://picsum.photos/900');
 }
 
 .bg-cover{
