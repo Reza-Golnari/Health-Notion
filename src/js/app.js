@@ -332,3 +332,27 @@ gsap.fromTo('.to-left > *', {
     duration: 1,
     stagger: .2,
 })
+
+gsap.fromTo('.blog-card-move', {
+    opacity: 0,
+    xPercent: -100,
+} , {
+    scrollTrigger: {
+        trigger: '.blog-card-move',
+        toggleActions: 'play none play reverse',
+    },
+    xPercent: 0,
+    opacity: 1,
+})
+
+gsap.fromTo('.blog-image-move', {
+    opacity: 0,
+    xPercent: 100,
+} , {
+    scrollTrigger: {
+        trigger: '.blog-image-move',
+        toggleActions: 'play none play reverse',
+    },
+    xPercent: 0,
+    opacity: 1,
+})
