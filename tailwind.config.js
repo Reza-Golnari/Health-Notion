@@ -36,6 +36,7 @@ module.exports = {
         text: '#757373',
         title: '#212322',
         gray: '#939393',
+        bone: '#EDE1CF',
       },
       spacing: {
         18: '72px',
