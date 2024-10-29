@@ -857,6 +857,10 @@ video {
   margin-bottom: 2.25rem;
 }
 
+.mb-\[300px\]{
+  margin-bottom: 300px;
+}
+
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -865,24 +869,16 @@ video {
   margin-top: 0.75rem;
 }
 
+.mt-36{
+  margin-top: 9rem;
+}
+
 .mt-4{
   margin-top: 1rem;
 }
 
 .mt-9{
   margin-top: 2.25rem;
-}
-
-.mb-\[300px\]{
-  margin-bottom: 300px;
-}
-
-.mt-36{
-  margin-top: 9rem;
-}
-
-.block{
-  display: block;
 }
 
 .flex{
@@ -925,16 +921,16 @@ video {
   height: 810px;
 }
 
+.h-\[820px\]{
+  height: 820px;
+}
+
 .h-full{
   height: 100%;
 }
 
 .h-screen{
   height: 100vh;
-}
-
-.h-\[820px\]{
-  height: 820px;
 }
 
 .w-1\/2{
@@ -1028,20 +1024,20 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-7{
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-7{
+  grid-template-columns: repeat(7, minmax(0, 1fr));
 }
 
 .grid-rows-5{
@@ -1068,6 +1064,18 @@ video {
   justify-content: space-between;
 }
 
+.justify-evenly{
+  justify-content: space-evenly;
+}
+
+.justify-stretch{
+  justify-content: stretch;
+}
+
+.justify-items-stretch{
+  justify-items: stretch;
+}
+
 .gap-10{
   gap: 2.5rem;
 }
@@ -1090,6 +1098,10 @@ video {
 
 .gap-9{
   gap: 2.25rem;
+}
+
+.gap-8{
+  gap: 2rem;
 }
 
 .space-y-18 > :not([hidden]) ~ :not([hidden]){
@@ -1169,6 +1181,11 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-dark{
   --tw-bg-opacity: 1;
   background-color: rgb(33 35 34 / var(--tw-bg-opacity));
@@ -1198,21 +1215,8 @@ video {
   background-color: rgb(255 255 255 / 0.15);
 }
 
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-\[url\(\'\/public\/images\/banner\.jpg\'\)\]{
   background-image: url('/public/images/banner.jpg');
-}
-
-.bg-\[url\(\'\'\)\]{
-  background-image: url('');
-}
-
-.bg-\[url\(\'https\:\/\/picsum\.photos\/800\'\)\]{
-  background-image: url('https://picsum.photos/800');
 }
 
 .bg-\[url\(\'https\:\/\/picsum\.photos\/900\'\)\]{
@@ -1309,14 +1313,6 @@ video {
 
 .pt-9{
   padding-top: 2.25rem;
-}
-
-.pb-\[300px\]{
-  padding-bottom: 300px;
-}
-
-.pt-36{
-  padding-top: 9rem;
 }
 
 .text-center{
