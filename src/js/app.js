@@ -356,3 +356,39 @@ gsap.fromTo('.blog-image-move', {
     xPercent: 0,
     opacity: 1,
 })
+
+gsap.fromTo('.blogCardFirstLeft', {
+    scale: .1,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    yPercent: -50,
+    xPercent: -50,
+} , {
+    scrollTrigger: {
+        trigger: '.cardParent',
+        toggleActions: 'play none play reverse',
+    },
+    scale: 1,
+    yPercent: 0,
+    xPercent: 0,
+    position: 'static',
+})
+
+gsap.fromTo('.blogImgFirstRight', {
+    scale: .1,
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    yPercent: -50,
+    xPercent: 50,
+} , {
+    scrollTrigger: {
+        trigger: '.cardParent',
+        toggleActions: 'play none play reverse',
+    },
+    scale: 1,
+    yPercent: 0,
+    xPercent: 0,
+    position: 'static',
+})
