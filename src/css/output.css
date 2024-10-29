@@ -885,6 +885,22 @@ video {
   margin-top: 2.25rem;
 }
 
+.mb-\[3000px\]{
+  margin-bottom: 3000px;
+}
+
+.mt-\[300px\]{
+  margin-top: 300px;
+}
+
+.mt-\[3000px\]{
+  margin-top: 3000px;
+}
+
+.mt-96{
+  margin-top: 24rem;
+}
+
 .flex{
   display: flex;
 }
@@ -1339,6 +1355,10 @@ video {
 
 .pt-\[290px\]{
   padding-top: 290px;
+}
+
+.pb-\[300px\]{
+  padding-bottom: 300px;
 }
 
 .text-center{
