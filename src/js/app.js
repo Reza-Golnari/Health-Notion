@@ -317,3 +317,18 @@ gsap.fromTo('.comments-center' , {
     opacity: 1,
     duration: 1,
 })
+
+
+gsap.fromTo('.to-left > *', {
+    opacity: 0,
+    xPercent: -100,
+} ,  {
+    scrollTrigger: {
+        trigger: '.to-left',
+        toggleActions: 'play none play reverse',
+    },
+    xPercent: 0,
+    opacity: 1,
+    duration: 1,
+    stagger: .2,
+})
