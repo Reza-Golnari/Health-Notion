@@ -393,7 +393,7 @@ gsap.fromTo('.blogImgFirstRight', {
     position: 'static',
 })
 
-const tl = gsap.timeline({repeat: 10,yoyo: true,repeatDelay: 0,});
+const tl = gsap.timeline({repeat: -1,yoyo: true,repeatDelay: 0,});
 
 tl.to('#helpBox' , {
     y: 10,
