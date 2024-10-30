@@ -392,3 +392,33 @@ gsap.fromTo('.blogImgFirstRight', {
     xPercent: 0,
     position: 'static',
 })
+
+const tl = gsap.timeline({repeat: 10,yoyo: true,repeatDelay: 0,});
+
+tl.to('#helpBox' , {
+    y: 10,
+    x: 10,
+    duration: 2,
+    ease: 'none',
+})
+
+tl.to('#helpBox' , {
+    y: 10,
+    x: -10,
+    duration: 2,
+    ease: 'none',
+})
+
+tl.to('#helpBox' , {
+    y: -10,
+    x: -10,
+    duration: 2,
+    ease: 'none',
+})
+
+tl.to('#helpBox' , {
+    y: -10,
+    x: 10,
+    duration: 2,
+    ease: 'none',
+})
