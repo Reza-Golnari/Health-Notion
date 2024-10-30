@@ -104,8 +104,10 @@ gsap.to('#b1' , {
         toggleActions: 'play none play reverse',
         onEnter: ()=> {
             gsap.to('#bi1' , {
-                filter: 'blur(0px)',
                 zIndex: 10,
+            })
+            gsap.to('.slider' , {
+                filter: 'blur(0px)'
             })
         },
         onLeaveBack: ()=> {
