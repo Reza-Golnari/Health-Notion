@@ -1253,24 +1253,20 @@ video {
   background-color: rgb(255 255 255 / 0.15);
 }
 
-.bg-\[url\(\'\/public\/images\/Container\%20\(2\)\.png\'\)\]{
-  background-image: url('/public/images/Container%20(2).png');
-}
-
-.bg-\[url\(\'\/public\/images\/banner\.jpeg\'\)\]{
-  background-image: url('/public/images/banner.jpeg');
-}
-
-.bg-\[url\(\'https\:\/\/picsum\.photos\/900\'\)\]{
-  background-image: url('https://picsum.photos/900');
-}
-
 .bg-\[url\(\'\/public\/images\/Container\%20\(1\)\.png\'\)\]{
   background-image: url('/public/images/Container%20(1).png');
 }
 
+.bg-\[url\(\'\/public\/images\/Container\%20\(2\)\.png\'\)\]{
+  background-image: url('/public/images/Container%20(2).png');
+}
+
 .bg-\[url\(\'\/public\/images\/Container\.png\'\)\]{
   background-image: url('/public/images/Container.png');
+}
+
+.bg-\[url\(\'\/public\/images\/banner\.jpeg\'\)\]{
+  background-image: url('/public/images/banner.jpeg');
 }
 
 .bg-cover{
