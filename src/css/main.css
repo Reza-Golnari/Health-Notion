@@ -32,3 +32,11 @@
     @apply opacity-100;
     transform: scale(1) !important ;
 }
+
+*{
+    @apply cursor-none !important;
+}
+
+a , button{
+    @apply rounded-lg;
+}

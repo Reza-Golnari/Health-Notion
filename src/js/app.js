@@ -2,6 +2,103 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+//  cursor animation
+const cursor = document.querySelector("#cursor");
+const innerCursor = document.querySelector("#innerCursor");
+const scaleItems = document.querySelectorAll('button , a , .hover-effect');
+let flag = false;
+
+window.addEventListener("mousemove" , e => {
+    updateCursor(e)
+})
+
+window.addEventListener("scroll" , e => {
+    flag = false;
+
+    leaveEffect()
+    updateCursor(e)
+})
+
+window.addEventListener("wheel" , e => {
+    flag = false;
+
+    leaveEffect()
+    updateCursor(e)
+})
+
+function updateCursor(e){
+    if(flag) return;
+
+    gsap.to(cursor , {
+        top: e.clientY + "px",
+        left: e.clientX + "px",
+        transform: 'translate(-50% , -50%)',
+        marginTop: 0,
+        duration: 0.3,
+        borderRadius: '50%',
+        visibility: 'visible',
+    })
+}
+
+scaleItems.forEach(item => {
+
+    item.addEventListener("mouseenter", e => {
+        flag = true;
+
+        hoverEffect(item)
+    })
+
+    item.addEventListener('mousemove', e => {
+        flag = true;
+
+        hoverEffect(item)
+    })
+
+    item.addEventListener("mouseleave", e => {
+        flag = false;
+
+        leaveEffect()
+    })
+})
+
+function hoverEffect(item) {
+    const itemRect = item.getBoundingClientRect();
+    const itemTop = itemRect.y + item.offsetHeight / 2;
+    const itemLeft = itemRect.x + item.offsetWidth / 2;
+
+    gsap.to(cursor , {
+        border: '2px solid black',
+        top: itemTop + "px",
+        left: itemLeft + "px",
+        borderRadius: window.getComputedStyle(item).borderRadius,
+        marginTop: 0,
+        padding: '4px',
+        duration: 0.3,
+        visibility: 'visible'
+    })
+
+    gsap.to(innerCursor , {
+        width: item.offsetWidth + "px",
+        height: item.offsetHeight + "px",
+        duration: 0.3,
+    })
+}
+
+function leaveEffect() {
+    gsap.to(innerCursor , {
+        width: 0,
+        height: 0,
+        duration: 0.3,
+    })
+
+    gsap.to(cursor , {
+        padding: 0,
+        borderWidth: 8,
+        duration: 0.3,
+    })
+}
+
+
 gsap.fromTo('#navbar' , {
     opacity: 0,
     yPercent: -100,
