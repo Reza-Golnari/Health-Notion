@@ -6,9 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 const cursor = document.querySelector("#cursor");
 
 window.addEventListener("mousemove" , e => {
-    console.log(e.clientX, e.clientY);
-    cursor.style.top = e.clientY + "px";
-    cursor.style.left = e.clientX + "px";
+    gsap.to(cursor , {
+        top: (e.clientY - 5) + "px",
+        left: (e.clientX - 5) + "px",
+        duration: 0.3,
+        visibility: 'visible'
+    })
 })
 
 

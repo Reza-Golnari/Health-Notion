@@ -740,6 +740,14 @@ video {
   display: none;
 }
 
+.visible{
+  visibility: visible;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
 .static{
   position: static;
 }
@@ -905,6 +913,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.h-4{
+  height: 1rem;
+}
+
 .h-6{
   height: 1.5rem;
 }
@@ -945,18 +957,6 @@ video {
   height: 100vh;
 }
 
-.h-24{
-  height: 6rem;
-}
-
-.h-2{
-  height: 0.5rem;
-}
-
-.h-4{
-  height: 1rem;
-}
-
 .w-1\/2{
   width: 50%;
 }
@@ -971,6 +971,10 @@ video {
 
 .w-2\/3{
   width: 66.666667%;
+}
+
+.w-4{
+  width: 1rem;
 }
 
 .w-6{
@@ -1015,18 +1019,6 @@ video {
   width: 100vw;
 }
 
-.w-24{
-  width: 6rem;
-}
-
-.w-2{
-  width: 0.5rem;
-}
-
-.w-4{
-  width: 1rem;
-}
-
 .min-w-72{
   min-width: 18rem;
 }
@@ -1062,6 +1054,10 @@ video {
 .rotate-180{
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-none{
+  cursor: none;
 }
 
 .grid-cols-1{
@@ -1251,6 +1247,11 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-bone{
   --tw-bg-opacity: 1;
   background-color: rgb(237 225 207 / var(--tw-bg-opacity));
@@ -1283,11 +1284,6 @@ video {
 
 .bg-white\/15{
   background-color: rgb(255 255 255 / 0.15);
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/public\/images\/Container\%20\(1\)\.png\'\)\]{
@@ -1565,6 +1561,10 @@ video {
 .swiper-slide-active{
   opacity: 1;
   transform: scale(1) !important ;
+}
+
+*{
+  cursor: none;
 }
 
 .before\:absolute::before{
