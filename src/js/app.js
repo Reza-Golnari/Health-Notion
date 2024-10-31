@@ -8,7 +8,15 @@ const innerCursor = document.querySelector("#innerCursor");
 const scaleItems = document.querySelectorAll('button , a , .hover-effect');
 let flag = false;
 
-window.addEventListener("mousemove" , e => {
+window.addEventListener("mousemove" , e => updateCursor(e))
+window.addEventListener("scroll" , e => {
+    flag = false;
+
+    leaveEffect()
+    updateCursor(e)
+})
+
+function updateCursor(e){
     if(flag) return;
 
     gsap.to(cursor , {
@@ -22,57 +30,60 @@ window.addEventListener("mousemove" , e => {
         borderRadius: '50%',
         visibility: 'visible'
     })
-
-})
+}
 
 scaleItems.forEach(item => {
     console.log(item.getBoundingClientRect())
 
     item.addEventListener("mouseenter", e => {
-        const itemRect = item.getBoundingClientRect();
-        const itemTop = itemRect.y + item.offsetHeight / 2;
-        const itemLeft = itemRect.x + item.offsetWidth / 2;
-
-        flag = true;
-
-        gsap.to(cursor , {
-            border: '2px solid black',
-            top: itemTop + "px",
-            left: itemLeft + "px",
-            borderRadius: window.getComputedStyle(item).borderRadius,
-            marginTop: 0,
-            padding: '4px',
-            duration: 0.3,
-            visibility: 'visible'
-        })
-
-        gsap.to(innerCursor , {
-            width: item.offsetWidth + "px",
-            height: item.offsetHeight + "px",
-            duration: 0.3,
-        })
+        hoverEffect(item)
     })
 
     item.addEventListener("mouseleave", e => {
-        gsap.to(innerCursor , {
-            width: 0,
-            height: 0,
-            duration: 0.3,
-        })
-
-        gsap.to(cursor , {
-            padding: 0,
-            borderWidth: 8,
-            duration: 0.3,
-        })
-
-        flag = false;
-
+        leaveEffect()
     })
 })
 
+function hoverEffect (item) {
+    const itemRect = item.getBoundingClientRect();
+    const itemTop = itemRect.y + item.offsetHeight / 2;
+    const itemLeft = itemRect.x + item.offsetWidth / 2;
 
+    flag = true;
 
+    gsap.to(cursor , {
+        border: '2px solid black',
+        top: itemTop + "px",
+        left: itemLeft + "px",
+        borderRadius: window.getComputedStyle(item).borderRadius,
+        marginTop: 0,
+        padding: '4px',
+        duration: 0.3,
+        visibility: 'visible'
+    })
+
+    gsap.to(innerCursor , {
+        width: item.offsetWidth + "px",
+        height: item.offsetHeight + "px",
+        duration: 0.3,
+    })
+}
+
+function leaveEffect() {
+    gsap.to(innerCursor , {
+        width: 0,
+        height: 0,
+        duration: 0.3,
+    })
+
+    gsap.to(cursor , {
+        padding: 0,
+        borderWidth: 8,
+        duration: 0.3,
+    })
+
+    flag = false;
+}
 
 
 gsap.fromTo('#navbar' , {
