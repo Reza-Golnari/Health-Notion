@@ -19,22 +19,29 @@ window.addEventListener("mousemove" , e => {
         duration: 0.3,
         padding: 0,
         borderWidth: 8,
+        borderRadius: '50%',
         visibility: 'visible'
     })
 
 })
 
 scaleItems.forEach(item => {
-    console.log(item)
+    console.log(item.getBoundingClientRect())
+
     item.addEventListener("mouseenter", e => {
+        const itemRect = item.getBoundingClientRect();
+        const itemTop = itemRect.y + item.offsetHeight / 2;
+        const itemLeft = itemRect.x + item.offsetWidth / 2;
+
         flag = true;
-        console.log(item)
+
         gsap.to(cursor , {
             border: '2px solid black',
-            top: (item.offsetTop + item.offsetHeight / 2) + "px",
-            left: (item.offsetLeft + item.offsetWidth / 2) + "px",
+            top: itemTop + "px",
+            left: itemLeft + "px",
+            borderRadius: window.getComputedStyle(item).borderRadius,
             marginTop: 0,
-            padding: '8px',
+            padding: '4px',
             duration: 0.3,
             visibility: 'visible'
         })
@@ -47,19 +54,20 @@ scaleItems.forEach(item => {
     })
 
     item.addEventListener("mouseleave", e => {
-        flag = false;
-
         gsap.to(innerCursor , {
             width: 0,
             height: 0,
-            duration: 0.1,
+            duration: 0.3,
         })
 
         gsap.to(cursor , {
-            duration: 0,
             padding: 0,
             borderWidth: 8,
+            duration: 0.3,
         })
+
+        flag = false;
+
     })
 })
 

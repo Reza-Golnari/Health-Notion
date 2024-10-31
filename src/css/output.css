@@ -1069,10 +1069,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-none{
-  cursor: none;
-}
-
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1575,11 +1571,9 @@ video {
   transform: scale(1) !important ;
 }
 
-/**{*/
-
-/*    @apply cursor-none !important;*/
-
-/*}*/
+*{
+  cursor: none !important;
+}
 
 .before\:absolute::before{
   content: var(--tw-content);
