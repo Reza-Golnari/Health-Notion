@@ -29,7 +29,6 @@ gsap.to('#headerImage' , {
         duration: 200,
     },
     borderRadius: '20px',
-    boxShadow: "0px 5px 15px rgba(0,0,0,.2)",
     width: "95%",
     height: "84%",
 })
