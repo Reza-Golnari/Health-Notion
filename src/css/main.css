@@ -33,6 +33,6 @@
     transform: scale(1) !important ;
 }
 
-*{
-    @apply cursor-none !important;
-}
+/**{*/
+/*    @apply cursor-none !important;*/
+/*}*/

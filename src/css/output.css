@@ -917,8 +917,8 @@ video {
   aspect-ratio: 1 / 1;
 }
 
-.h-4{
-  height: 1rem;
+.h-24{
+  height: 6rem;
 }
 
 .h-6{
@@ -957,25 +957,13 @@ video {
   height: 100%;
 }
 
-.h-screen{
-  height: 100vh;
-}
-
-.h-24{
-  height: 6rem;
-}
-
 .h-max{
   height: -moz-max-content;
   height: max-content;
 }
 
-.h-0{
-  height: 0px;
-}
-
-.min-h-4{
-  min-height: 1rem;
+.h-screen{
+  height: 100vh;
 }
 
 .w-1\/2{
@@ -994,8 +982,8 @@ video {
   width: 66.666667%;
 }
 
-.w-4{
-  width: 1rem;
+.w-24{
+  width: 6rem;
 }
 
 .w-6{
@@ -1040,20 +1028,8 @@ video {
   width: 100vw;
 }
 
-.w-24{
-  width: 6rem;
-}
-
-.w-0{
-  width: 0px;
-}
-
 .min-w-72{
   min-width: 18rem;
-}
-
-.min-w-4{
-  min-width: 1rem;
 }
 
 .max-w-72{
@@ -1286,11 +1262,6 @@ video {
 .bg-bg{
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
-}
-
-.bg-black{
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-bone{
@@ -1604,9 +1575,11 @@ video {
   transform: scale(1) !important ;
 }
 
-*{
-  cursor: none !important;
-}
+/**{*/
+
+/*    @apply cursor-none !important;*/
+
+/*}*/
 
 .before\:absolute::before{
   content: var(--tw-content);

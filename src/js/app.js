@@ -4,15 +4,62 @@ gsap.registerPlugin(ScrollTrigger);
 
 //  cursor animation
 const cursor = document.querySelector("#cursor");
+const innerCursor = document.querySelector("#innerCursor");
+const scaleItems = document.querySelectorAll('button');
+let flag = false;
 
 window.addEventListener("mousemove" , e => {
+    if(flag) return;
+
     gsap.to(cursor , {
         top: e.clientY + "px",
         left: e.clientX + "px",
         transform: 'translate(-50% , -50%)',
         marginTop: 0,
         duration: 0.3,
+        padding: 0,
+        borderWidth: 8,
         visibility: 'visible'
+    })
+
+})
+
+scaleItems.forEach(item => {
+    console.log(item)
+    item.addEventListener("mouseenter", e => {
+        flag = true;
+        console.log(item)
+        gsap.to(cursor , {
+            border: '2px solid black',
+            top: (item.offsetTop + item.offsetHeight / 2) + "px",
+            left: (item.offsetLeft + item.offsetWidth / 2) + "px",
+            marginTop: 0,
+            padding: '8px',
+            duration: 0.3,
+            visibility: 'visible'
+        })
+
+        gsap.to(innerCursor , {
+            width: item.offsetWidth + "px",
+            height: item.offsetHeight + "px",
+            duration: 0.3,
+        })
+    })
+
+    item.addEventListener("mouseleave", e => {
+        flag = false;
+
+        gsap.to(innerCursor , {
+            width: 0,
+            height: 0,
+            duration: 0.1,
+        })
+
+        gsap.to(cursor , {
+            duration: 0,
+            padding: 0,
+            borderWidth: 8,
+        })
     })
 })
 
