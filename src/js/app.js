@@ -2,6 +2,19 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+//  cursor animation
+const cursor = document.querySelector("#cursor");
+
+window.addEventListener("mousemove" , e => {
+    console.log(e.clientX, e.clientY);
+    cursor.style.top = e.clientY + "px";
+    cursor.style.left = e.clientX + "px";
+})
+
+
+
+
+
 gsap.fromTo('#navbar' , {
     opacity: 0,
     yPercent: -100,

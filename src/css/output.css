@@ -744,6 +744,10 @@ video {
   position: static;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -802,6 +806,10 @@ video {
 
 .z-30{
   z-index: 30;
+}
+
+.z-50{
+  z-index: 50;
 }
 
 .col-span-2{
@@ -937,6 +945,18 @@ video {
   height: 100vh;
 }
 
+.h-24{
+  height: 6rem;
+}
+
+.h-2{
+  height: 0.5rem;
+}
+
+.h-4{
+  height: 1rem;
+}
+
 .w-1\/2{
   width: 50%;
 }
@@ -993,6 +1013,18 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-24{
+  width: 6rem;
+}
+
+.w-2{
+  width: 0.5rem;
+}
+
+.w-4{
+  width: 1rem;
 }
 
 .min-w-72{
@@ -1251,6 +1283,11 @@ video {
 
 .bg-white\/15{
   background-color: rgb(255 255 255 / 0.15);
+}
+
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[url\(\'\/public\/images\/Container\%20\(1\)\.png\'\)\]{
