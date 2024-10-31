@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 //  cursor animation
 const cursor = document.querySelector("#cursor");
 const innerCursor = document.querySelector("#innerCursor");
-const scaleItems = document.querySelectorAll('button');
+const scaleItems = document.querySelectorAll('button , a , .hover-effect');
 let flag = false;
 
 window.addEventListener("mousemove" , e => {

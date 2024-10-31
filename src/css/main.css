@@ -36,3 +36,7 @@
 *{
     @apply cursor-none !important;
 }
+
+a , button{
+    @apply rounded-lg;
+}
