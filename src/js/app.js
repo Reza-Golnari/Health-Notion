@@ -9,6 +9,7 @@ window.addEventListener("mousemove" , e => {
     gsap.to(cursor , {
         top: (e.clientY - 5) + "px",
         left: (e.clientX - 5) + "px",
+        marginTop: 0,
         duration: 0.3,
         visibility: 'visible'
     })

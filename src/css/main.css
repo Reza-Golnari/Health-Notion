@@ -34,5 +34,5 @@
 }
 
 *{
-    @apply cursor-none;
+    @apply cursor-none !important;
 }

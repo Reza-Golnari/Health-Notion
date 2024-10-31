@@ -1564,7 +1564,7 @@ video {
 }
 
 *{
-  cursor: none;
+  cursor: none !important;
 }
 
 .before\:absolute::before{
