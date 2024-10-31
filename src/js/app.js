@@ -8,8 +8,18 @@ const innerCursor = document.querySelector("#innerCursor");
 const scaleItems = document.querySelectorAll('button , a , .hover-effect');
 let flag = false;
 
-window.addEventListener("mousemove" , e => updateCursor(e))
+window.addEventListener("mousemove" , e => {
+    updateCursor(e)
+})
+
 window.addEventListener("scroll" , e => {
+    flag = false;
+
+    leaveEffect()
+    updateCursor(e)
+})
+
+window.addEventListener("wheel" , e => {
     flag = false;
 
     leaveEffect()
@@ -25,31 +35,36 @@ function updateCursor(e){
         transform: 'translate(-50% , -50%)',
         marginTop: 0,
         duration: 0.3,
-        padding: 0,
-        borderWidth: 8,
         borderRadius: '50%',
-        visibility: 'visible'
+        visibility: 'visible',
     })
 }
 
 scaleItems.forEach(item => {
-    console.log(item.getBoundingClientRect())
 
     item.addEventListener("mouseenter", e => {
+        flag = true;
+
+        hoverEffect(item)
+    })
+
+    item.addEventListener('mousemove', e => {
+        flag = true;
+
         hoverEffect(item)
     })
 
     item.addEventListener("mouseleave", e => {
+        flag = false;
+
         leaveEffect()
     })
 })
 
-function hoverEffect (item) {
+function hoverEffect(item) {
     const itemRect = item.getBoundingClientRect();
     const itemTop = itemRect.y + item.offsetHeight / 2;
     const itemLeft = itemRect.x + item.offsetWidth / 2;
-
-    flag = true;
 
     gsap.to(cursor , {
         border: '2px solid black',
@@ -81,8 +96,6 @@ function leaveEffect() {
         borderWidth: 8,
         duration: 0.3,
     })
-
-    flag = false;
 }
 
 
